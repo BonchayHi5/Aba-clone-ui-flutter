@@ -1,16 +1,9 @@
-# aba_clone_ui
+# Aba_clone_ui
 
-A new Flutter project.
+Studying purpose
 
-## Getting Started
+## Home Screen
 
-This project is a starting point for a Flutter application.
+<img src="https://firebasestorage.googleapis.com/v0/b/deep-link-5671f.appspot.com/o/home-screen.png?alt=media&token=83e4c99b-b342-4054-aa14-59a6607ff17a" >
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
