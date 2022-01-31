@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: false,
-        leading: const Icon(Icons.dehaze),
+        // leading: const Icon(Icons.dehaze),
         backgroundColor: secondaryColor,
         title: Text(
           widget.title,
@@ -77,6 +77,82 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
+      ),
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: Container(
+          color: baseColor,
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: baseColor,
+                  border: Border(
+                    bottom: BorderSide(width: 0.5, color: Colors.grey),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 75,
+                      width: 75,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.white, width: 2),
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            'https://images.pexels.com/photos/3283568/pexels-photo-3283568.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 12),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text('Angela',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 18)),
+                        SizedBox(height: 8),
+                        Text('App ID : xxxxxx',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 14)),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                title: const Text(
+                  'Item 1',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                title: const Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        ),
       ),
       body: Column(
         children: <Widget>[
@@ -125,7 +201,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     width: double.infinity,
                     color: quickTransferColor,
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -147,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     width: double.infinity,
                     color: quickPaymentColor,
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
