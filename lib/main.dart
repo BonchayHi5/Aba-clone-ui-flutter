@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,23 +130,80 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               ListTile(
+                leading: const Icon(
+                  Icons.calendar_today_rounded,
+                  color: Colors.white,
+                ),
                 title: const Text(
-                  'Item 1',
+                  'Scheduled Payment',
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
                   Navigator.pop(context);
                 },
               ),
               ListTile(
-                title: const Text('Item 2'),
+                leading: const Icon(
+                  Icons.location_on,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  'ABA PAY Places',
+                  style: TextStyle(color: Colors.white),
+                ),
                 onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.monetization_on,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  'Exchange Rates',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.phone_in_talk,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  'Contact Us',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.library_books,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  'Terms & Conditions',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+              ListTile(
+                leading: const Icon(
+                  Icons.settings,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  'Settings',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
                   Navigator.pop(context);
                 },
               ),
